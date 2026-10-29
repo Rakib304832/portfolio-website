@@ -1,8 +1,8 @@
-import { Award, GraduationCap, MapPin } from "lucide-react";
+import { BookOpen, GraduationCap, MapPin } from "lucide-react";
 
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { certifications, education } from "@/content/timeline";
+import { education, learningFocus } from "@/content/timeline";
 
 export function Education() {
   return (
@@ -18,7 +18,7 @@ export function Education() {
                 <span className="text-gradient">curiosity</span>.
               </>
             }
-            description="Formal computer science training, paired with the far less formal education of shipping real projects and reading a lot of source code."
+            description="Formal computer science study at Rangpur Polytechnic Institute, paired with the practical education of shipping live projects and reading a lot of source code."
           />
         </Reveal>
 
@@ -81,25 +81,25 @@ export function Education() {
           <Reveal delay={160} className="lg:col-span-4">
             <div className="gradient-border h-full rounded-3xl bg-surface/50 p-6 sm:p-7">
               <div className="flex items-center gap-2.5">
-                <Award className="size-4 text-accent" aria-hidden="true" />
+                <BookOpen className="size-4 text-accent" aria-hidden="true" />
                 <h3 className="font-mono text-[10px] uppercase tracking-[0.28em] text-muted">
-                  Certifications
+                  Currently learning
                 </h3>
               </div>
 
               <ul className="mt-5 divide-y divide-line">
-                {certifications.map((certification) => (
-                  <li key={certification.name} className="py-4 first:pt-0 last:pb-0">
+                {learningFocus.map((item) => (
+                  <li key={item.name} className="py-4 first:pt-0 last:pb-0">
                     <div className="flex items-start justify-between gap-4">
                       <p className="text-[13.5px] font-medium leading-snug text-foreground/90">
-                        {certification.name}
+                        {item.name}
                       </p>
                       <span className="shrink-0 font-mono text-[10px] text-accent/80">
-                        {certification.year}
+                        {item.year}
                       </span>
                     </div>
-                    <p className="mt-1 text-[11.5px] text-muted">
-                      {certification.issuer}
+                    <p className="mt-1 text-[11.5px] leading-relaxed text-muted">
+                      {item.detail}
                     </p>
                   </li>
                 ))}
@@ -107,8 +107,8 @@ export function Education() {
 
               <div className="mt-6 rounded-2xl border border-dashed border-line bg-white/[0.015] p-4">
                 <p className="font-mono text-[9.5px] uppercase leading-relaxed tracking-[0.18em] text-muted">
-                  Currently pursuing a BSc thesis on perceived performance in
-                  data-heavy dashboards.
+                  3rd semester · Diploma in Computer Science · Rangpur
+                  Polytechnic Institute
                 </p>
               </div>
             </div>

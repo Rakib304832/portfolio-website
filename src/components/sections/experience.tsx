@@ -21,7 +21,7 @@ export function Experience() {
                 just reading.
               </>
             }
-            description="Freelance product work, a frontend internship, and open source — each one added a layer I could not have learned from a tutorial."
+            description="No invented job titles — this is the work behind the four live projects: full-stack builds that each added a layer I could not have learned from a tutorial."
           />
         </Reveal>
 
@@ -109,11 +109,11 @@ export function Experience() {
                   The short version
                 </p>
                 <h3 className="mt-3 font-display text-2xl font-semibold leading-tight tracking-tight text-foreground">
-                  Four years of turning briefs into shipped interfaces.
+                  Four live projects, built end to end.
                 </h3>
                 <p className="mt-3 text-[13.5px] leading-relaxed text-muted">
-                  The resume has the timelines and the details. The portfolio has
-                  the proof.
+                  Every project on this site has a live URL, a public repository,
+                  and a case study explaining the decisions behind it.
                 </p>
 
                 <a
@@ -144,10 +144,10 @@ export function Experience() {
                 </p>
                 <ul className="mt-4 space-y-3">
                   {[
-                    "Design-literate frontend engineering",
-                    "Performance and accessibility habits",
-                    "Comfort owning features end to end",
-                    "Clear written communication",
+                    "Full-stack feature ownership",
+                    "Responsive, accessible interfaces",
+                    "REST API design and integration",
+                    "Clear documentation and handover",
                   ].map((item) => (
                     <li
                       key={item}

@@ -45,7 +45,7 @@ export default function NotFound() {
         </div>
 
         <p className="mt-16 font-mono text-[9.5px] uppercase tracking-[0.24em] text-muted/60">
-          Rakib Hasan · Frontend Developer
+          Rakib · Full Stack Developer
         </p>
       </div>
     </section>

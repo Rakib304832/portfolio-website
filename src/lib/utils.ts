@@ -8,7 +8,7 @@ export function getSiteUrl(): string {
   const url =
     process.env.NEXT_PUBLIC_SITE_URL ??
     process.env.URL ??
-    "https://rakibhasan.dev";
+    "https://rakib-portfolio.netlify.app";
 
   return url.replace(/\/$/, "");
 }

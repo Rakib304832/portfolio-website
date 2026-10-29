@@ -8,12 +8,11 @@ const stack: Array<{ name: string; icon: TechName }> = [
   { name: "TypeScript", icon: "typescript" },
   { name: "Tailwind CSS", icon: "tailwind" },
   { name: "Node.js", icon: "node" },
-  { name: "PostgreSQL", icon: "postgresql" },
-  { name: "Prisma", icon: "prisma" },
-  { name: "Figma", icon: "figma" },
-  { name: "Docker", icon: "docker" },
+  { name: "Express", icon: "express" },
+  { name: "MongoDB", icon: "mongodb" },
+  { name: "Better Auth", icon: "betterauth" },
   { name: "Git", icon: "git" },
-  { name: "Vercel", icon: "vercel" },
+  { name: "Vite", icon: "vite" },
   { name: "Netlify", icon: "netlify" },
 ];
 

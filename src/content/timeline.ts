@@ -19,98 +19,78 @@ export type ExperienceItem = {
   current?: boolean;
 };
 
+export type LearningItem = {
+  name: string;
+  detail: string;
+  year: string;
+};
+
 export const education: EducationItem[] = [
   {
-    institution: "University of Dhaka",
-    degree: "BSc in Computer Science & Engineering",
-    period: "2022 — 2026",
-    result: "CGPA 3.82 / 4.00",
-    location: "Dhaka, Bangladesh",
+    institution: "Rangpur Polytechnic Institute",
+    degree: "Diploma in Computer Science",
+    period: "Ongoing · 3rd semester",
+    result: "CGPA 3.61 / 4.00",
+    location: "Rangpur, Bangladesh",
     description:
-      "Final-year student specialising in web engineering and human-computer interaction. My thesis explores interface latency and perceived performance in data-heavy dashboards.",
+      "Building a foundation in programming, databases, and web engineering while shipping full-stack projects alongside my studies. The classroom explains the concepts; the projects make them stick.",
     courses: [
+      "Programming",
       "Data Structures",
-      "Algorithms",
-      "Database Systems",
-      "Web Engineering",
-      "Human-Computer Interaction",
-      "Operating Systems",
+      "Database Management",
+      "Web Development",
+      "Object-Oriented Programming",
+      "Computer Networks",
     ],
-  },
-  {
-    institution: "Notre Dame College",
-    degree: "Higher Secondary Certificate — Science",
-    period: "2019 — 2021",
-    result: "GPA 5.00 / 5.00",
-    location: "Dhaka, Bangladesh",
-    description:
-      "Physics, chemistry, and higher mathematics, with an early detour into competitive programming that eventually led to the web.",
-    courses: ["Physics", "Chemistry", "Higher Mathematics", "ICT"],
   },
 ];
 
 export const experience: ExperienceItem[] = [
   {
-    role: "Freelance Frontend Developer",
-    company: "Self-employed",
-    period: "2023 — Present",
-    location: "Remote",
+    role: "Independent Full Stack Developer",
+    company: "Self-directed projects",
+    period: "2025 — Present",
+    location: "Dinajpur, Bangladesh",
     description:
-      "Partnering with founders and small teams to design and ship marketing sites, product dashboards, and design systems.",
+      "Building and shipping full-stack web applications end to end — from data fetching, authentication, and REST APIs to responsive interfaces and deployment.",
     bullets: [
-      "Shipped 20+ production interfaces with a 95+ Lighthouse performance average.",
-      "Built reusable component libraries that cut new-page delivery time by roughly 40%.",
-      "Introduced accessibility checks and visual regression testing into client workflows.",
-      "Worked directly with designers and founders from brief to launch, including handover docs.",
+      "Built BazarDor, a Bengali market-price platform with Next.js 16, Better Auth, and MongoDB, including protected routes and market comparison views.",
+      "Developed FitLog, a workout planner with a five-exercise daily plan limit, saved exercises, and live session totals.",
+      "Shipped User Manager, a full-stack dashboard with a Next.js frontend and a separate Express 5 REST API, including validation and error handling.",
+      "Designed and deployed four responsive projects on Netlify, using GitHub for version control and iterative delivery.",
     ],
-    tech: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Figma"],
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Tailwind CSS",
+    ],
     current: true,
-  },
-  {
-    role: "Frontend Developer Intern",
-    company: "TechNova Solutions",
-    period: "Jan — Jun 2023",
-    location: "Dhaka, Bangladesh",
-    description:
-      "Joined a four-person frontend team maintaining an internal analytics platform used by operations teams.",
-    bullets: [
-      "Rebuilt the reporting table with virtualized rows, supporting 50k+ records without jank.",
-      "Integrated REST endpoints and replaced ad-hoc fetch logic with typed API clients.",
-      "Reduced the main bundle by 28% through route-level code splitting and dependency cleanup.",
-      "Wrote component tests with Jest and React Testing Library for critical filters.",
-    ],
-    tech: ["React", "JavaScript", "REST APIs", "Jest", "Sass"],
-  },
-  {
-    role: "Open Source Contributor",
-    company: "Various projects",
-    period: "2022 — Present",
-    location: "Remote",
-    description:
-      "Occasional contributions to UI libraries, documentation, and accessibility fixes in the React ecosystem.",
-    bullets: [
-      "Merged accessibility and keyboard-navigation fixes into component libraries.",
-      "Improved documentation examples for form and dialog primitives.",
-      "Reviewing pull requests and triaging issues in projects I rely on.",
-    ],
-    tech: ["TypeScript", "React", "Accessibility", "Documentation"],
   },
 ];
 
-export const certifications = [
+export const learningFocus: LearningItem[] = [
   {
-    name: "Meta Front-End Developer Professional Certificate",
-    issuer: "Coursera",
-    year: "2024",
+    name: "Full-stack architecture",
+    detail: "Next.js App Router, REST APIs, deployment",
+    year: "Ongoing",
   },
   {
-    name: "JavaScript Algorithms & Data Structures",
-    issuer: "freeCodeCamp",
-    year: "2023",
+    name: "Authentication & databases",
+    detail: "Better Auth, MongoDB, protected routes",
+    year: "2026",
   },
   {
-    name: "Responsive Web Design",
-    issuer: "freeCodeCamp",
-    year: "2022",
+    name: "TypeScript patterns",
+    detail: "Typed components, API contracts, state",
+    year: "2026",
+  },
+  {
+    name: "UI engineering",
+    detail: "Tailwind CSS 4, responsive layouts, accessibility",
+    year: "Ongoing",
   },
 ];

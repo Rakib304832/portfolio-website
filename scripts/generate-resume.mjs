@@ -1,9 +1,8 @@
 /**
- * Generates the placeholder resume PDF at public/resume.pdf.
+ * Generates Rakib's resume PDF at public/resume.pdf.
  * Run with: node scripts/generate-resume.mjs
  *
- * Swap the content below (or replace public/resume.pdf entirely) once the real
- * resume is ready.
+ * Replace public/resume.pdf with a designed version whenever one is available.
  */
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
@@ -24,111 +23,82 @@ const rule = rgb(0.85, 0.87, 0.9);
 const darkBar = rgb(0.04, 0.07, 0.1);
 
 const resume = {
-  name: "Rakib Hasan",
-  role: "Frontend Developer",
-  email: "hello@rakibhasan.dev",
-  phone: "+880 1712 345678",
-  location: "Dhaka, Bangladesh",
-  site: "rakibhasan.dev",
-  github: "github.com/rakibhasan",
+  name: "Rakib",
+  role: "Full Stack Developer",
+  email: "h.rakib0000000000@gmail.com",
+  phone: "+880 1625 672901",
+  location: "Dinajpur, Bangladesh",
+  site: "rakib-portfolio.netlify.app",
+  github: "github.com/Rakib304832",
   profile:
-    "Frontend developer with 4+ years of experience building fast, accessible product interfaces. Specialises in React, Next.js, and TypeScript, with a strong design sensibility and enough backend range to own features end to end.",
+    "Full-stack developer and Computer Science diploma student in Dinajpur, Bangladesh. I build complete web applications with React, Next.js, Node.js, Express, MongoDB, and TypeScript — from data and authentication to responsive interfaces and deployment.",
   experience: [
     {
-      role: "Freelance Frontend Developer",
-      company: "Self-employed",
-      location: "Remote",
-      period: "2023 — Present",
+      role: "Independent Full Stack Developer",
+      company: "Self-directed projects",
+      location: "Dinajpur, Bangladesh",
+      period: "2025 — Present",
       bullets: [
-        "Shipped 20+ production interfaces across marketing sites, dashboards, and design systems, averaging 95+ on Lighthouse performance.",
-        "Built reusable component libraries that cut new-page delivery time by roughly 40% and kept design and code in sync.",
-        "Introduced accessibility checks and visual regression testing into client workflows, catching regressions before release.",
-      ],
-    },
-    {
-      role: "Frontend Developer Intern",
-      company: "TechNova Solutions",
-      location: "Dhaka, Bangladesh",
-      period: "Jan — Jun 2023",
-      bullets: [
-        "Rebuilt the reporting table with virtualized rows, supporting 50k+ records without jank.",
-        "Reduced the main bundle by 28% through route-level code splitting and dependency cleanup.",
-        "Replaced ad-hoc fetch logic with typed API clients and wrote component tests for critical filters.",
-      ],
-    },
-    {
-      role: "Open Source Contributor",
-      company: "Various projects",
-      location: "Remote",
-      period: "2022 — Present",
-      bullets: [
-        "Merged accessibility and keyboard-navigation fixes into React component libraries.",
-        "Improved documentation examples for form and dialog primitives; review pull requests and triage issues.",
+        "Built BazarDor, a Bengali market-price platform with Next.js 16, Better Auth, MongoDB, and protected user pages.",
+        "Developed FitLog, a workout planner with a five-exercise daily limit, saved exercises, and live session totals.",
+        "Built DevStack, a React and TypeScript stack builder with a JSON-driven catalogue and a live selection panel.",
+        "Shipped User Manager, a Next.js dashboard with a separate Express 5 REST API, validation, and full CRUD.",
       ],
     },
   ],
   projects: [
     {
-      name: "DevFlow",
+      name: "BazarDor",
       description:
-        "Real-time sprint dashboard with optimistic boards, analytics, and a live activity feed.",
-      stack: "Next.js · TypeScript · PostgreSQL · Prisma",
-      url: "devflow-demo.netlify.app",
+        "Bengali-first market prices with daily trends, market ranges, and authenticated pages.",
+      stack: "Next.js 16 · React 19 · TypeScript · Better Auth · MongoDB",
+      url: "bazordo.netlify.app",
     },
     {
-      name: "ShopSphere",
+      name: "FitLog",
       description:
-        "Headless fashion storefront focused on editorial storytelling, speed, and a frictionless checkout.",
-      stack: "Next.js · Stripe · Sanity · Zustand",
-      url: "shopsphere-demo.vercel.app",
+        "Workout library and daily planner with saved exercises and live session totals.",
+      stack: "Next.js 16 · React 19 · TypeScript · Tailwind CSS 4",
+      url: "remarkable-tiramisu-1f6f4a.netlify.app/workout",
     },
     {
-      name: "CampusHub",
+      name: "DevStack",
       description:
-        "Student community platform with real-time feeds, event discovery, and a shared campus calendar.",
-      stack: "React · Node.js · MongoDB · Socket.IO",
-      url: "campushub-demo.vercel.app",
+        "Visual development-stack builder with a JSON catalogue and a live selection panel.",
+      stack: "React 19 · TypeScript · Vite · Tailwind CSS",
+      url: "teal-dragon-0cccab.netlify.app",
+    },
+    {
+      name: "User Manager",
+      description:
+        "Full-stack CRUD dashboard with search, validation, and live API status.",
+      stack: "Next.js 16 · Express 5 · TypeScript · REST API",
+      url: "scintillating-parfait-c51647.netlify.app",
     },
   ],
   skills: [
     {
       label: "Frontend",
-      value:
-        "React, Next.js, TypeScript, JavaScript, Tailwind CSS, HTML/CSS, Framer Motion",
+      value: "React, Next.js, TypeScript, JavaScript, Tailwind CSS, HTML/CSS",
     },
     {
       label: "Backend",
-      value:
-        "Node.js, Express, PostgreSQL, MongoDB, Prisma, REST APIs, Auth.js",
+      value: "Node.js, Express, MongoDB, Better Auth, REST APIs",
     },
     {
       label: "Tools",
-      value:
-        "Git/GitHub, Figma, Docker, Vercel, Netlify, Linux, Jest, Vitest, Playwright",
+      value: "Git/GitHub, Vite, Netlify, Postman, npm",
     },
   ],
   education: [
     {
-      degree: "BSc in Computer Science & Engineering",
-      school: "University of Dhaka",
-      location: "Dhaka, Bangladesh",
-      period: "2022 — 2026",
-      detail: "CGPA 3.82 / 4.00",
-      note: "Relevant coursework: Data Structures, Algorithms, Database Systems, Web Engineering, Human-Computer Interaction, Operating Systems.",
+      degree: "Diploma in Computer Science",
+      school: "Rangpur Polytechnic Institute",
+      location: "Rangpur, Bangladesh",
+      period: "Ongoing · 3rd semester",
+      detail: "CGPA 3.61 / 4.00",
+      note: "Coursework: Programming, Data Structures, Database Management, Web Development, Object-Oriented Programming, Computer Networks.",
     },
-    {
-      degree: "Higher Secondary Certificate — Science",
-      school: "Notre Dame College",
-      location: "Dhaka, Bangladesh",
-      period: "2019 — 2021",
-      detail: "GPA 5.00 / 5.00",
-      note: "Physics, Chemistry, Higher Mathematics, ICT.",
-    },
-  ],
-  certifications: [
-    "Meta Front-End Developer Professional Certificate — Coursera, 2024",
-    "JavaScript Algorithms & Data Structures — freeCodeCamp, 2023",
-    "Responsive Web Design — freeCodeCamp, 2022",
   ],
 };
 
@@ -137,13 +107,15 @@ const font = await doc.embedFont(StandardFonts.Helvetica);
 const bold = await doc.embedFont(StandardFonts.HelveticaBold);
 const italic = await doc.embedFont(StandardFonts.HelveticaOblique);
 
-doc.setTitle("Rakib Hasan — Frontend Developer Resume");
+doc.setTitle("Rakib — Full Stack Developer Resume");
 doc.setAuthor(resume.name);
-doc.setSubject("Frontend developer resume");
+doc.setSubject("Full-stack developer resume");
 doc.setKeywords([
-  "frontend developer",
+  "full stack developer",
   "React",
   "Next.js",
+  "Node.js",
+  "MongoDB",
   "TypeScript",
   "resume",
 ]);
@@ -423,6 +395,7 @@ const contact = [
   resume.phone,
   resume.location,
   resume.site,
+  resume.github,
 ];
 let contactY = PAGE_H - 62;
 for (const item of contact) {
@@ -475,20 +448,6 @@ y -= 2;
 section("Education");
 for (const item of resume.education) {
   educationEntry(item);
-}
-y -= 1;
-
-section("Certifications");
-for (const item of resume.certifications) {
-  ensure(13);
-  page.drawText(item, {
-    x: MARGIN,
-    y,
-    size: 8.6,
-    font,
-    color: muted,
-  });
-  y -= 12.4;
 }
 
 /* ------------------------------------------------------------------ */

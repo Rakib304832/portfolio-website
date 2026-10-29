@@ -21,7 +21,7 @@ export function About() {
                 <span className="text-gradient">last 10%</span>.
               </>
             }
-            description="Design-minded engineering, obsessive polish, and a soft spot for interfaces that quietly do their job."
+            description="Full-stack development, a computer science diploma, and a habit of turning what I learn into live products."
           />
         </Reveal>
 
@@ -107,7 +107,7 @@ export function About() {
             </h3>
             <span className="h-px flex-1 bg-line" aria-hidden="true" />
             <span className="font-mono text-[10px] text-muted/70">
-              2021 → now
+              Learning → building
             </span>
           </div>
 

@@ -54,7 +54,7 @@ export function Contact() {
                 </h2>
 
                 <p className="mt-5 max-w-md text-[15px] leading-relaxed text-muted">
-                  I am currently open to frontend roles and select freelance
+                  I am currently open to full-stack roles and select freelance
                   projects. Tell me what you are making, where it is stuck, and
                   what a win looks like — I will reply within one working day.
                 </p>

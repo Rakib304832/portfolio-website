@@ -28,7 +28,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 const siteUrl = getSiteUrl();
-const description = `${siteConfig.name} is a ${siteConfig.designation.toLowerCase()} in ${siteConfig.location}, building fast, accessible interfaces with React, Next.js, and TypeScript.`;
+const description = `${siteConfig.name} is a ${siteConfig.designation.toLowerCase()} in ${siteConfig.location}, building complete web applications with React, Next.js, Node.js, and MongoDB.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -38,13 +38,16 @@ export const metadata: Metadata = {
   },
   description,
   keywords: [
-    "Rakib Hasan",
-    "frontend developer",
+    "Rakib",
+    "Rakib Hassan",
+    "full stack developer",
     "React developer",
     "Next.js developer",
+    "Node.js developer",
+    "MongoDB",
     "TypeScript",
     "portfolio",
-    "Dhaka",
+    "Dinajpur",
     "Bangladesh",
   ],
   authors: [{ name: siteConfig.name, url: siteUrl }],
@@ -91,6 +94,7 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: siteConfig.name,
+  alternateName: "Rakib Hassan",
   jobTitle: siteConfig.designation,
   description: siteConfig.tagline,
   url: siteUrl,
@@ -98,8 +102,13 @@ const personSchema = {
   telephone: siteConfig.phone,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Dhaka",
+    addressLocality: "Dinajpur",
+    addressRegion: "Rangpur",
     addressCountry: "BD",
+  },
+  alumniOf: {
+    "@type": "EducationalOrganization",
+    name: "Rangpur Polytechnic Institute",
   },
   sameAs: siteConfig.socials.map((social) => social.href),
   knowsAbout: [
@@ -107,7 +116,11 @@ const personSchema = {
     "Next.js",
     "TypeScript",
     "Tailwind CSS",
-    "Web accessibility",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Better Auth",
+    "REST APIs",
     "Web performance",
   ],
 };

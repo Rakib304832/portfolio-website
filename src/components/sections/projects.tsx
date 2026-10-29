@@ -33,7 +33,7 @@ export function Projects() {
                 <span className="text-gradient">used</span>, not just viewed.
               </>
             }
-            description="Three case studies covering product dashboards, commerce, and community. Each one goes past the screenshot: the decisions, the hard parts, and what I would do next."
+            description="Four live projects covering price data, fitness planning, developer tooling, and full-stack CRUD. Each case study goes past the screenshot: the decisions, the hard parts, and what I would do next."
           />
         </Reveal>
 
@@ -41,7 +41,7 @@ export function Projects() {
           <ProjectCard project={featured} featured index={0} />
         </Reveal>
 
-        <div className="mt-5 grid gap-5 md:grid-cols-2">
+        <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {rest.map((project, index) => (
             <Reveal key={project.slug} delay={index * 100}>
               <ProjectCard project={project} index={index + 1} />
