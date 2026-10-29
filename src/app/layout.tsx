@@ -145,7 +145,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <ScrollProgress />
         <Navbar />
 
-        <main id="main">{children}</main>
+        <main id="main" cz-shortcut-listen="true">{children}</main>
 
         <Footer />
 

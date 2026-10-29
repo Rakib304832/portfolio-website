@@ -1,28 +1,29 @@
 # Rakib — Full Stack Developer Portfolio
 
-A dark, aurora-toned portfolio for **Rakib**, a full-stack developer based in Dinajpur, Bangladesh. Built with Next.js 16, React 19, Tailwind CSS v4, and a small amount of client-side interaction.
+A responsive portfolio for Rakib, a full-stack developer based in Dinajpur, Bangladesh. It presents his background, skills, experience, contact details, and project case studies.
 
-## What is inside
+## Tech stack
 
-- Responsive hero with a real portrait, resume download, and social links
-- About section with the learning journey, quick facts, and working values
-- Categorized, graphical skills covering frontend, backend, and workflow
-- Education at Rangpur Polytechnic Institute and project-based experience
-- Four live case studies with stack details, challenges, and future improvements:
-  - [BazarDor](https://bazordo.netlify.app/) — Bengali market prices, Better Auth, MongoDB
-  - [FitLog](https://6ab79c28d00735f541c5c0ed--remarkable-tiramisu-1f6f4a.netlify.app/workout) — workout library and daily planner
-  - [DevStack](https://teal-dragon-0cccab.netlify.app/) — visual development stack builder
-  - [User Manager](https://scintillating-parfait-c51647.netlify.app/) — full-stack CRUD dashboard with an Express API
-- Direct contact links for email, phone, and WhatsApp, each with copy-to-clipboard
-- Custom 404, sitemap, robots.txt, Open Graph image, and Person JSON-LD
+- Next.js 16 App Router and React 19
+- TypeScript
+- Tailwind CSS 4
+- Lucide React and Simple Icons
+- Sharp for generated image assets
+- pdf-lib for the generated resume
 
-## Pages
+## Features
 
-- `/` — hero, about, skills, education, experience, selected work, contact
-- `/projects/[slug]` — the four case studies above
-- `/sitemap.xml`, `/robots.txt`, custom 404
+- Single-page portfolio with hero, about, skills, education, experience, projects, and contact sections
+- Responsive navigation, motion effects, and reduced-motion support
+- Individual project case-study pages with project metadata and navigation
+- Resume download and direct email, phone, and WhatsApp links
+- Copy-to-clipboard controls for contact details
+- Custom not-found page
+- Open Graph and Twitter metadata, Person structured data, sitemap, and robots rules
 
-## Run locally
+## Getting started
+
+Use Node.js 22 (the version configured for Netlify) and npm.
 
 ```bash
 npm install
@@ -31,63 +32,54 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-```bash
-npm run build    # production build
-npm run start    # serve the production build
-npm run lint     # ESLint
-npm run resume   # regenerate public/resume.pdf
-npm run assets   # regenerate the OG image and favicon
-```
+## Commands
 
-## Content map
-
-| What | Where |
+| Command | Description |
 | --- | --- |
-| Name, role, bio, contact details, social links, stats | `src/content/site.ts` |
-| About copy, quick facts, journey, values | `src/content/about.ts` |
-| Skill groups and levels | `src/content/skills.ts` |
-| Case studies, stacks, live/GitHub URLs | `src/content/projects.ts` |
-| Education, experience, learning focus | `src/content/timeline.ts` |
-| Portrait | `public/IMG-20260902-WA0002.jpg` |
-| Project covers | `public/projects/*.png` |
-| Resume PDF | `public/resume.pdf` |
-| OG share image | `public/og.png` |
+| `npm run dev` | Start the local Next.js development server |
+| `npm run build` | Create the production build |
+| `npm run start` | Serve the production build locally |
+| `npm run lint` | Run ESLint |
+| `npm run assets` | Regenerate `public/og.png` and `src/app/icon.svg` |
+| `npm run resume` | Regenerate `public/resume.pdf` |
 
-### Personal details used
+## Configuration and content
 
-- Email: `h.rakib0000000000@gmail.com`
-- Phone: `01625672901`
-- WhatsApp: `01303839198`
-- GitHub: [@Rakib304832](https://github.com/Rakib304832)
-- X: [@HRaki46262](https://x.com/HRaki46262)
-- Facebook: [rakib.fatim](https://www.facebook.com/rakib.fatim)
+Most portfolio content is kept in TypeScript data files:
 
-LinkedIn is intentionally omitted until a profile URL is supplied.
+| Content | File |
+| --- | --- |
+| Name, role, biography, location, contact links, social links, and navigation | `src/content/site.ts` |
+| About section | `src/content/about.ts` |
+| Skills | `src/content/skills.ts` |
+| Project case studies and URLs | `src/content/projects.ts` |
+| Education and experience | `src/content/timeline.ts` |
 
-### Images and resume
+The site URL is selected in this order: `NEXT_PUBLIC_SITE_URL`, Netlify's `URL`, then `https://rakib-portfolio.netlify.app`. Set `NEXT_PUBLIC_SITE_URL` when deploying to a different canonical domain; it is used for metadata, structured data, the sitemap, and robots rules.
 
-The portrait is the supplied profile photo, and the project covers are live-site screenshots captured at 1600 × 1000. The resume is generated from `scripts/generate-resume.mjs` with `pdf-lib`:
+## Project structure
 
-```bash
-npm run resume
+```text
+public/                  Static images, project covers, and resume
+scripts/                 Asset and resume generation scripts
+src/
+  app/                   App Router pages, metadata, styles, and route handlers
+  components/
+    layout/              Navigation, footer, and site-wide UI
+    projects/            Project-specific components
+    sections/            Homepage sections
+    ui/                  Shared UI components
+  content/               Site, project, skill, and timeline data
+  lib/                   Shared utilities
 ```
 
-Replace `public/IMG-20260902-WA0002.jpg`, `public/projects/*.png`, or `public/resume.pdf` directly whenever better source files are available.
+## Updating assets
+
+- The profile portrait used on the homepage and not-found page is `public/IMG-20260902-WA0002.jpg`. Update `photo` and `photoAlt` in `src/content/site.ts` if you change its path or description.
+- Project cover images are in `public/projects/`; update the corresponding `cover` values in `src/content/projects.ts`.
+- The Open Graph image is `public/og.png`. Edit `scripts/generate-assets.mjs`, then run `npm run assets` to regenerate it and the app icon.
+- The resume is `public/resume.pdf`. Edit `scripts/generate-resume.mjs`, then run `npm run resume` to regenerate it.
 
 ## Deployment
 
-The project is configured for Netlify in `netlify.toml`:
-
-- build command: `npm run build`
-- publish directory: `.next`
-- Node 22
-
-Set `NEXT_PUBLIC_SITE_URL` to the final domain so canonical URLs, Open Graph metadata, and the sitemap use the live address. Netlify also exposes its own `URL` environment variable, which is used as a fallback.
-
-## Design notes
-
-- Colors, type scale, gradients, and reveal/marquee animations live in `src/app/globals.css`.
-- Fonts: Sora (display), Inter (body), JetBrains Mono (labels) via `next/font`.
-- Motion respects `prefers-reduced-motion`.
-- The mobile menu traps focus, closes on Escape, and locks background scrolling.
-- Contact uses direct links and copy-to-clipboard; there is no form or server.
+The project includes `netlify.toml` configured to run `npm run build`, publish `.next`, and use Node.js 22. Set `NEXT_PUBLIC_SITE_URL` to the canonical production URL if it differs from the default.
