@@ -12,6 +12,7 @@
 
 # testing
 /coverage
+/.qa
 
 # next.js
 /.next/
@@ -36,6 +37,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# netlify
+.netlify
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+AGENTs.md
