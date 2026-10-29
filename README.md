@@ -48,7 +48,7 @@ npm run assets   # regenerate the OG image and favicon
 | Skill groups and levels | `src/content/skills.ts` |
 | Case studies, stacks, live/GitHub URLs | `src/content/projects.ts` |
 | Education, experience, learning focus | `src/content/timeline.ts` |
-| Portrait | `public/images/profile.png` |
+| Portrait | `public/IMG-20260902-WA0002.jpg` |
 | Project covers | `public/projects/*.png` |
 | Resume PDF | `public/resume.pdf` |
 | OG share image | `public/og.png` |
@@ -66,13 +66,13 @@ LinkedIn is intentionally omitted until a profile URL is supplied.
 
 ### Images and resume
 
-The portrait is a real GitHub avatar, and the project covers are live-site screenshots captured at 1600 × 1000. The resume is generated from `scripts/generate-resume.mjs` with `pdf-lib`:
+The portrait is the supplied profile photo, and the project covers are live-site screenshots captured at 1600 × 1000. The resume is generated from `scripts/generate-resume.mjs` with `pdf-lib`:
 
 ```bash
 npm run resume
 ```
 
-Replace `public/images/profile.png`, `public/projects/*.png`, or `public/resume.pdf` directly whenever better source files are available.
+Replace `public/IMG-20260902-WA0002.jpg`, `public/projects/*.png`, or `public/resume.pdf` directly whenever better source files are available.
 
 ## Deployment
 

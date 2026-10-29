@@ -1,7 +1,9 @@
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 import { buttonStyles } from "@/components/ui/button";
+import { siteConfig } from "@/content/site";
 
 export default function NotFound() {
   return (
@@ -16,6 +18,16 @@ export default function NotFound() {
       </div>
 
       <div className="shell flex flex-col items-center text-center">
+        <div className="relative mb-8 size-28 overflow-hidden rounded-full border border-accent/30 bg-surface p-1 shadow-[0_0_48px_rgba(94,234,212,0.12)]">
+          <Image
+            src={siteConfig.photo}
+            alt={siteConfig.photoAlt}
+            fill
+            sizes="112px"
+            className="rounded-full object-cover"
+          />
+        </div>
+
         <p className="font-mono text-[11px] uppercase tracking-[0.34em] text-accent">
           404 / Page not found
         </p>

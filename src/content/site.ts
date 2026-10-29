@@ -41,7 +41,7 @@ export const siteConfig = {
   whatsapp: "+880 1303 839198",
   whatsappHref: "8801303839198",
   resumeUrl: "/resume.pdf",
-  photo: "/images/profile.png",
+  photo: "/IMG-20260902-WA0002.jpg",
   photoAlt: "Portrait of Rakib, full-stack developer",
   siteUrl: "https://rakib-portfolio.netlify.app",
   socials: [
